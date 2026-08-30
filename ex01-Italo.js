@@ -57,15 +57,27 @@ if (imc < 18.5) {
 else if (imc >= 18.5 && imc <= 24.9) {
     console.log('peso normal')
 }
-else{
+else {
     console.log('sobrepeso')
 }
 
 // 6) Crie uma função para exibir uma mensagem de boas-vindas. Ela deve aceitar dois parâmetros: o nome do usuário e o idioma de
 // preferência. Defina o idioma padrão como português. Se o idioma for português retorne 'Olá, [nome]!', se for inglês retorne 'Hello, [nome]!', e se for espanhol retorne '¡Hola, [nome]!'.
 
+function boasVindas(nome, idioma) {
+    if (idioma === "portugues") {
+        return `Olá, ${nome}!`;
+    }
+    else if (idioma === "ingles") {
+        return `Hello, ${nome}`
+    }
+    else {
+        return `¡Hola, ${nome}`
+    }
+}
 
-
+boasVindas("silas", "ingles")
+console.log(boasVindas("silas", "espanhol"))
 /*
 
 7) Escreva um algoritmo que retorne o valor de 4 produtos que são: Arroz, Feijão, Carne e Macarrão e informe se este valor é acima da média nacional ou não.
